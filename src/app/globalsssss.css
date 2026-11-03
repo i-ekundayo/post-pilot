@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* ========================================
+   CSS VARIABLES — COLOR DEFINITIONS
+======================================== */
+
+:root {
+  /* Brand */
+  --brand: #6ea8fe;
+  --brand-hover: #8bbcff;
+  --brand-soft: #172f59;
+
+  /* Surfaces */
+  --page-background: #0b1120;
+  --surface: #111a2d;
+  --sidebar: #0a0f1c;
+  --sidebar-hover: #17233a;
+  --sidebar-active: #243149;
+
+  /* Text */
+  --text-primary: #e8eef8;
+  --text-secondary: #91a0b8;
+  --text-muted: #64748b;
+  --sidebar-text: #c5d0e2;
+
+  /* Borders and focus */
+  --border: #243149;
+  --input-border: #34425d;
+  --focus: #6ea8fe;
+
+  /* Status: Success */
+  --success-bg: #173b2a;
+  --success-text: #6ee7a0;
+
+  /* Status: Warning */
+  --warning-bg: #4a321b;
+  --warning-text: #fbbf74;
+
+  /* Status: Info */
+  --info-bg: #172f59;
+  --info-text: #8bbcff;
+
+  /* Status: Error */
+  --error-bg: #48232b;
+  --error-text: #fca5a5;
+}
+
+/* ========================================
+   TAILWIND CSS V4 THEME
+======================================== */
+
+@theme inline {
+  /* Brand */
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-soft: var(--brand-soft);
+
+  /* Surfaces */
+  --color-background: var(--page-background);
+  --color-surface: var(--surface);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-hover: var(--sidebar-hover);
+  --color-sidebar-active: var(--sidebar-active);
+
+  /* Text */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-sidebar-text: var(--sidebar-text);
+
+  /* Borders and focus */
+  --color-border: var(--border);
+  --color-input-border: var(--input-border);
+  --color-focus: var(--focus);
+
+  /* Status: Success */
+  --color-success-bg: var(--success-bg);
+  --color-success-text: var(--success-text);
+
+  /* Status: Warning */
+  --color-warning-bg: var(--warning-bg);
+  --color-warning-text: var(--warning-text);
+
+  /* Status: Info */
+  --color-info-bg: var(--info-bg);
+  --color-info-text: var(--info-text);
+
+  /* Status: Error */
+  --color-error-bg: var(--error-bg);
+  --color-error-text: var(--error-text);
+
+  /* Fonts */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+
+body {
+  background: var(--page-background);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}

@@ -25,11 +25,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full border border-red-500 flex flex-col">
+      <body className="min-h-full flex flex-col h-dvh overflow-hidden">
         <Header />
-        <main className="flex flex-1 border border-purple-700">
+        <main className="grid grid-cols-5 flex-1 min-h-0 ">
           <Sidebar />
-          {children}
+          <section className="col-span-4 p-8 overflow-y-auto scrollbar-thin">
+            {children}
+          </section>
         </main>
       </body>
     </html>

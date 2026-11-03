@@ -9,12 +9,10 @@ const NavItem = ({ href, children }) => {
   const isActive =
     href === pathname || (pathname.startsWith(href) && href != "/");
 
-  if (isActive) console.log(isActive);
-
   return (
     <Link
       href={href}
-      className={`px-4 py-2 rounded-lg ${isActive ? "text-white bg-sidebar-active" : "text-sidebar-text"}`}
+      className={`px-4 py-3 rounded-2xl ${isActive ? "text-blue-600 bg-blue-accent-surface" : "bg-background text-muted-text"}`}
     >
       {children}
     </Link>

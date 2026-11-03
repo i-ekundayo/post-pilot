@@ -1,10 +1,17 @@
-"use client";
-import { usePathname } from "next/navigation";
+import { Suspense } from "react";
+import MainSectionHeading from "../components/MainSectionHeading";
+import Cards from "./Cards";
+import CardsSkeleton from "./CardsSkeleton";
 
 const Dashboard = () => {
-  const pathname = usePathname();
-  console.log(pathname);
-  return <div></div>;
+  return (
+    <div className="flex flex-col gap-8">
+      <MainSectionHeading />
+      <Suspense fallback={<CardsSkeleton />}>
+        <Cards />
+      </Suspense>
+    </div>
+  );
 };
 
 export default Dashboard;

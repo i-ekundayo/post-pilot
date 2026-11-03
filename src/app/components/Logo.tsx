@@ -1,14 +1,11 @@
-import { PanelsTopLeft } from "lucide-react";
-
 const Logo = () => {
   return (
-    <div className="flex gap-2 items-start">
-      <div className="bg-brand size-10 rounded-lg flex items-center justify-center cursor-pointer">
-        <PanelsTopLeft />
+    <div className="flex gap-4 items-center">
+      <div className="bg-button size-10 rounded-xl flex items-center justify-center cursor-pointer font-bold">
+        C
       </div>
       <div>
-        <h2 className="text-2xl font-bold">PostPilot</h2>
-        <p className="uppercase text-text-muted">Content Studio</p>
+        <h2 className="text-lg font-bold">Contently</h2>
       </div>
     </div>
   );
