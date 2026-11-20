@@ -26,15 +26,18 @@ const EditorialWorkspace = () => {
 
     default:
       currentpath = "Overview";
-      redirect("/");
+      break;
   }
   return (
     <div className="flex gap-2">
-      <div className="flex gap-2 text-muted-text items-center">
-        <BookOpen className="size-5" />
-        <p>Editorial workspace</p>
+      <div className="hidden sm:flex gap-2 items-center">
+        <div className="flex gap-2 text-muted-text items-center">
+          <BookOpen className="size-5" />
+          <p>Editorial workspace</p>
+        </div>
+        <span>/</span>
       </div>
-      <span>/</span>
+
       <p className="font-semibold">{currentpath}</p>
     </div>
   );

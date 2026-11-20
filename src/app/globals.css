@@ -5,19 +5,50 @@
 ======================================== */
 
 :root {
-  --background: #0b1120;
-  --button: #2f6fed;
-  --card: #111a2d;
-  --raised-surface: #17233a;
-  --primary-text: #e8eef8;
-  --muted-text: #91a0b8;
-  --borders: #243149;
-  --primary-blue: #6ea8fe;
+  /* Foundation */
+  --background: #0a1020;
+  --card: #121d33;
+  --raised-surface: #1b2942;
+  --concept: #1a2940;
+
+  /* Actions */
+  --button: #4f8cff;
+  --button-hover: #3978ed;
+
+  /* Text */
+  --primary-text: #edf3ff;
+  --secondary-text: #c0cce0;
+  --muted-text: #91a2bd;
+
+  /* Borders */
+  --borders: #2b3b57;
+
+  /* Primary blue */
+  --primary-blue: #82b1ff;
   --blue-accent-surface: #172f59;
+  --blue-accent-text: #82b1ff;
+
+  /* Purple */
   --purple-accent-surface: #302653;
-  --orange-accent-surface: #4a321b;
-  --green-accent-surface: #173b2a;
-  --concept: #182230;
+  --purple-accent-text: #c4a7ff;
+
+  /* Orange */
+  --orange-accent-surface: #49301d;
+  --orange-accent-text: #ffb66d;
+
+  /* Green */
+  --green-accent-surface: #173d30;
+  --green-accent-text: #5ee0a5;
+
+  /* Cyan */
+  --cyan-accent-surface: #123a49;
+  --cyan-accent-text: #67d8f2;
+
+  /* Status colors */
+  --success: #34d399;
+  --warning: #fbbf24;
+  --danger: #fb7185;
+  --info: #60a5fa;
 }
 
 /* ========================================
@@ -25,19 +56,51 @@
 ======================================== */
 
 @theme inline {
+  /* Foundation */
   --color-background: var(--background);
-  --color-button: var(--button);
   --color-card: var(--card);
   --color-raised-surface: var(--raised-surface);
+  --color-concept: var(--concept);
+
+  /* Actions */
+  --color-button: var(--button);
+  --color-button-hover: var(--button-hover);
+
+  /* Text */
   --color-primary-text: var(--primary-text);
+  --color-secondary-text: var(--secondary-text);
   --color-muted-text: var(--muted-text);
+
+  /* Borders */
   --color-borders: var(--borders);
+
+  /* Primary blue */
   --color-primary-blue: var(--primary-blue);
   --color-blue-accent-surface: var(--blue-accent-surface);
+  --color-blue-accent-text: var(--blue-accent-text);
+
+  /* Purple */
   --color-purple-accent-surface: var(--purple-accent-surface);
+  --color-purple-accent-text: var(--purple-accent-text);
+
+  /* Orange */
   --color-orange-accent-surface: var(--orange-accent-surface);
+  --color-orange-accent-text: var(--orange-accent-text);
+
+  /* Green */
   --color-green-accent-surface: var(--green-accent-surface);
-  --color-concept: var(--concept);
+  --color-green-accent-text: var(--green-accent-text);
+
+  /* Cyan */
+  --color-cyan-accent-surface: var(--cyan-accent-surface);
+  --color-cyan-accent-text: var(--cyan-accent-text);
+
+  /* Status */
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-info: var(--info);
+
   /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -47,9 +110,28 @@
    GLOBAL STYLES
 ======================================== */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background: var(--background);
   color: var(--primary-text);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
+}
+
+/* ========================================
+   INPUT STYLES
+======================================== */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }

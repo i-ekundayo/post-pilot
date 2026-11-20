@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
+import { startTransition } from "react";
+import { useRouter } from "next/navigation";
 
 type ErrorPageProps = {
   error: Error & { digest?: string };
@@ -11,6 +13,15 @@ const ErrorPage = ({ error, reset }: ErrorPageProps) => {
   useEffect(() => {
     console.error("Application error:", error);
   }, [error]);
+
+  const router = useRouter();
+
+  const reload = () => {
+    startTransition(() => {
+      router.refresh();
+      reset();
+    });
+  };
 
   return (
     <div className="min-h-[60vh] flex flex-col items-center justify-center gap-4 text-center p-8">
@@ -33,8 +44,8 @@ const ErrorPage = ({ error, reset }: ErrorPageProps) => {
 
       <button
         type="button"
-        onClick={() => reset()}
-        className="px-5 py-3 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700"
+        onClick={() => reload()}
+        className="px-5 py-3 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700 cursor-pointer"
       >
         Try again
       </button>

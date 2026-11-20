@@ -103,3 +103,64 @@ body {
   color: var(--text-primary);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
+
+@import "tailwindcss";
+
+/* ========================================
+   CSS VARIABLES — COLOR DEFINITIONS
+======================================== */
+
+:root {
+  --background: #0b1120;
+  --button: #2f6fed;
+  --card: #111a2d;
+  --raised-surface: #17233a;
+  --primary-text: #e8eef8;
+  --muted-text: #91a0b8;
+  --borders: #243149;
+  --primary-blue: #6ea8fe;
+  --blue-accent-surface: #172f59;
+  --purple-accent-surface: #302653;
+  --orange-accent-surface: #4a321b;
+  --green-accent-surface: #173b2a;
+  --concept: #182230;
+}
+
+/* ========================================
+   TAILWIND CSS V4 THEME
+======================================== */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-button: var(--button);
+  --color-card: var(--card);
+  --color-raised-surface: var(--raised-surface);
+  --color-primary-text: var(--primary-text);
+  --color-muted-text: var(--muted-text);
+  --color-borders: var(--borders);
+  --color-primary-blue: var(--primary-blue);
+  --color-blue-accent-surface: var(--blue-accent-surface);
+  --color-purple-accent-surface: var(--purple-accent-surface);
+  --color-orange-accent-surface: var(--orange-accent-surface);
+  --color-green-accent-surface: var(--green-accent-surface);
+  --color-concept: var(--concept);
+  /* Fonts */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+
+body {
+  background: var(--background);
+  color: var(--primary-text);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}

@@ -12,3 +12,10 @@ export const cardIconColor = {
   orange: "bg-orange-accent-surface text-orange-600",
   green: "bg-green-accent-surface text-green-600",
 };
+
+export const cardBgColor = {
+  blue: "bg-blue-accent-surface text-blue-600",
+  purple: "bg-purple-accent-surface text-purple-600",
+  orange: "bg-orange-accent-surface text-orange-600",
+  green: "bg-green-accent-surface text-green-600",
+};

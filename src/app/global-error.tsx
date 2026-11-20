@@ -1,11 +1,23 @@
 "use client";
 
+import { startTransition } from "react";
+import { useRouter } from "next/navigation";
+
 export default function GlobalError({
   reset,
 }: {
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const router = useRouter();
+
+  const reload = () => {
+    startTransition(() => {
+      router.refresh();
+      reset();
+    });
+  };
+
   return (
     <html lang="en">
       <body>
@@ -16,8 +28,8 @@ export default function GlobalError({
 
           <button
             type="button"
-            onClick={() => reset()}
-            className="rounded-xl bg-blue-600 px-5 py-3 font-bold text-white"
+            onClick={() => reload()}
+            className="rounded-xl bg-blue-600 px-5 py-3 font-bold text-white cursor-pointer"
           >
             Try again
           </button>

@@ -1,3 +1,8 @@
+"use client";
+
+import { motion } from "motion/react";
+import Link from "next/link";
+import Logo from "./Logo";
 import NavItem from "./NavItem";
 import {
   LayoutDashboard,
@@ -9,8 +14,14 @@ import {
 
 const Sidebar = () => {
   return (
-    <aside className="bg-raised-surface flex flex-col px-6 py-8 border-r-2 border-r-borders">
-      <nav className="flex flex-col justify-between flex-1 pb-8 mb-8 border-b-2 border-b-borders">
+    <motion.aside className="bg-raised-surface flex flex-col pb-8 h-full border-r-2 border-r-borders divide-y-2 divide-borders w-60">
+      <div className="px-12 py-8 h-25">
+        <Link href="/">
+          <Logo />
+        </Link>
+      </div>
+
+      <nav className="flex flex-col justify-between flex-1 py-8 mb-8 mx-6 border-b-2 border-b-borders">
         <div>
           <h3 className="uppercase text-sm tracking-widest mb-4 px-4 text-muted-text font-semibold">
             Workspace
@@ -44,7 +55,7 @@ const Sidebar = () => {
         </NavItem>
       </nav>
 
-      <div className="flex items-center justify-between px-2">
+      <div className="flex items-center justify-between px-2 mx-6">
         <div className="flex gap-3 items-center">
           <div className="bg-blue-accent-surface text-blue-600 rounded-full size-10 flex items-center justify-center text-sm font-medium">
             JD
@@ -56,7 +67,7 @@ const Sidebar = () => {
         </div>
         <ChevronDown className="size-4 text-muted-text" />
       </div>
-    </aside>
+    </motion.aside>
   );
 };
 
